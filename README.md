@@ -25,7 +25,7 @@ openssl rsa -in key.pem -text -noout
 ```bash
 #!/bin/bash
 
-if [ $# -nq 1 ]
+if [ $# -ne 1 ]
 	then
 		echo 'Needs to supply argument'
 		echo '  $1 = server'
