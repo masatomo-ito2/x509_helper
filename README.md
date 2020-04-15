@@ -39,12 +39,17 @@ openssl s_client -showcerts -connect ${1}:443 </dev/null 2>/dev/null |openssl x5
 
 #### Add	
 Copy your CA to dir `/usr/local/share/ca-certificates/`
+
 Use command: `sudo cp foo.crt /usr/local/share/ca-certificates/foo.crt`
+
 Update the CA store: `sudo update-ca-certificates`
+
 
 #### Remove	
 Remove your CA.
+
 Update the CA store: `sudo update-ca-certificates --fresh`
+
 
 ## 参考
 
