@@ -20,7 +20,7 @@ openssl x509 -in ./certificate.pem -text -noout
 openssl rsa -in key.pem -text -noout
 ```
 
-### リモートサーバー（CA)のパブリック証明書を取得
+### リモートサーバーのCA certを取得
 
 ```bash
 #!/bin/bash
