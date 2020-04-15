@@ -35,23 +35,9 @@ fi
 openssl s_client -showcerts -connect ${1}:443 </dev/null 2>/dev/null |openssl x509 -outform PEM >mycertfile.pem 
 ```
 
-### Add CA to trusted store
-
-#### Add	
-Copy your CA to dir `/usr/local/share/ca-certificates/`
-
-Use command: `sudo cp foo.crt /usr/local/share/ca-certificates/foo.crt`
-
-Update the CA store: `sudo update-ca-certificates`
-
-
-#### Remove	
-Remove your CA.
-
-Update the CA store: `sudo update-ca-certificates --fresh`
-
 
 ## 参考
 
+- [https://cloudpack.media/14148](https://cloudpack.media/14148)
 - [https://manuals.gfi.com/en/kerio/connect/content/server-configuration/ssl-certificates/adding-trusted-root-certificates-to-the-server-1605.html](https://manuals.gfi.com/en/kerio/connect/content/server-configuration/ssl-certificates/adding-trusted-root-certificates-to-the-server-1605.html)
 - [https://www.hashicorp.com/resources/hashitls-demystifying-security-certs?fbclid=IwAR0r_61CbJNdV-_b2FSxNCpn-rx9110lLDB3FPpRL_Cls6wVEhkLJ0AqLRQ](https://www.hashicorp.com/resources/hashitls-demystifying-security-certs?fbclid=IwAR0r_61CbJNdV-_b2FSxNCpn-rx9110lLDB3FPpRL_Cls6wVEhkLJ0AqLRQ)
